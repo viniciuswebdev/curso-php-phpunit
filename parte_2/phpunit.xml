@@ -1,0 +1,13 @@
+<phpunit colors="true">
+    <!--<logging>
+        <log type="coverage-html" target="report" lowUpperBound="35" highLowerBound="70"/>
+    </logging>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">src</directory>
+            <exclude>
+                <directory suffix="Test.php">src</directory>
+            </exclude>
+        </whitelist>
+    </filter>-->
+</phpunit>
