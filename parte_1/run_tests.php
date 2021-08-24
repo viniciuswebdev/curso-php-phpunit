@@ -18,6 +18,11 @@ foreach (new DirectoryIterator(__DIR__) as $file) {
             continue;
         }
 
-        $testClass->$method();
+        try {
+            echo "\e[1;33;40m" . $method . ":\e[0m ";
+            $testClass->$method();
+        } catch (\Exception $e) {
+            echo "\e[0;31;40m" . $e->getMessage() . "\e[0m\n";
+        }
     }
 }
