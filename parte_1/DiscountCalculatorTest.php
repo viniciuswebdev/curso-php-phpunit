@@ -2,7 +2,8 @@
 
 class DiscountCalculatorTest
 {
-    public function ShouldApply_WhenValueIsAboveTheMinimumTest() {
+    public function ShouldApply_WhenValueIsAboveTheMinimumTest()
+    {
 
         $discountCalculator = new DiscountCalculator();
 
@@ -13,7 +14,8 @@ class DiscountCalculatorTest
         $this->assertEquals($expectedValue, $totalWithDiscount);
     }
 
-    public function ShouldNotApply_WhenValueIsBellowTheMinimumTest() {
+    public function ShouldNotApply_WhenValueIsBellowTheMinimumTest()
+    {
 
         $discountCalculator = new DiscountCalculator();
 
@@ -24,13 +26,14 @@ class DiscountCalculatorTest
         $this->assertEquals($expectedValue, $totalWithDiscount);
     }
 
-    public function assertEquals($expectedValue, $actualValue) {
+    public function assertEquals($expectedValue, $actualValue)
+    {
 
         if ($expectedValue !== $actualValue) {
             $message = 'Expected: ' . $expectedValue . ' but got: ' . $actualValue;
             throw new \Exception($message);
         }
 
-        echo "Test passed! \n";
+        echo "\e[0;32;40mTest passed!\e[0m\n";
     }
 }
